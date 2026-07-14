@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Undefined In Function</title>
+</head>
+<body>
+    <P>Greetings !</P>
+  <button onclick="greet()">Undefined</button>
+  <button onclick="greet('ronic')">Ronic</button>
+  <button onclick="greet('Eric');">Eric</button>
+  <script>
+  function greet(name) 
+  {
+    if(!name) 
+    {
+        alert('hello there');
+    }else
+    {
+      alert(`Hello ${name}`);
+    }
+  }
+  </script>
+</body>
+</html>
