@@ -4,6 +4,46 @@
   <title>Length Convertor</title>
 </head>
 <body>
+  <script>
+    let result=0;
+    function convertLength(length,from,to){
+      if(from === 'km' && to === 'mile'){
+        //as 1 mile = 1.6km approx.
+        result = length/1.6;
+      }else if(from === 'mile' && to === 'km'){
+        result = length * 1.6;
+      }else if(from === 'km' && to === 'km'){
+        result = length;
+      }else if(from === 'mile' && to === 'mile'){
+        result = length;
+      }else if(from === 'km' && to === 'ft'){
+        result = length * 3281;
+      }else if(from === 'mile' && to === 'ft'){
+        result = length * 5280;
+      }else if(from === 'ft' && to === 'ft'){
+        result = length;
+      }else if(from === 'ft' && to === 'km'){
+        result = length / 3281;
+      }else if(from === 'ft' && to === 'mile'){
+        result = length / 5280;
+      }else{
+        alert('INVALID INPUT ; USE km OR mile ');
+      }
+      alert(`Length : ${length} ${from} is converted to ${result} ${to} `);
+      return 0;
+    }
+  convertLength(5,'mile','km');
+  convertLength(5,'mile','ft');
+  convertLength(5,'km','ft');
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Length Convertor</title>
+</head>
+<body>
   <h2>Change the Units (km,mile,ft) Into Each Other</h2>
   <p>Remember to add '' for units !!</p>
   <script>
