@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Convert Temperature</title>
+</head>
+<body>
+  <h2>Convert Temperatures (Fahrenhiet Vice Virse Celsius)</h2>
+  <p>You have to give date as , Degrees and then Unit</p>
+  <script>
+    let result = 0;
+    let F , C;
+    function convertTemp(degree,unit)
+    {
+      if(unit === 'F')
+      {
+       result = Math.round((degree-32)*5/9);
+
+        alert(`${degree} fahrenhiet equals to ${result} Celsius`);
+      }else if(unit === 'C')
+      {
+
+        result =Math.round( (degree*9/5)+32);
+
+        alert(`${degree} celcius equals to ${result} Fahrenhiet`);
+      }else{
+        alert('Unit is invalid, Use F for Fahrenhiet and C for Celsius')
+      }
+      return result;
+    }
+  convertTemp(25,'C');
+  convertTemp(86,'F');
+
+  </script>
+</body>
+</html>
