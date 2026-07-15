@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Length Convertor</title>
+</head>
+<body>
+  <script>
+    let result=0;
+    function convertLength(length,from,to){
+      if(from === 'km' && to === 'mile'){
+        //as 1 mile = 1.6km approx.
+        result = length/1.6;
+      }else if(from === 'mile' && to === 'km'){
+        result = length * 1.6;
+      }else if(from === 'km' && to === 'km'){
+        result = length;
+      }else if(from === 'mile' && to === 'mile'){
+        result = length;
+      }else{
+        alert('INVALID INPUT ; USE km OR mile ');
+      }
+      alert(`Length : ${length} ${from} is converted to ${result} ${to} `);
+      return 0;
+    }
+  convertLength(50,'mile','km');
+  convertLength(32,'km','mile');
+  convertLength(50,'km','km');
+  </script>
+</body>
+</html>
